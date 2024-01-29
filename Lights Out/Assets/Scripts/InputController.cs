@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputController : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class InputController : MonoBehaviour
         direction = 1;
         if(illuminationLevel < 0.5f){
             dead = true;
+            SceneManager.LoadSceneAsync("GameOver");
         }    
         counting = false;
     }
