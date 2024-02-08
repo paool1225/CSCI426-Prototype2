@@ -54,6 +54,9 @@ public class InputController : MonoBehaviour
     }
     public void Recharge(){
         illuminationLevel += 0.3f;
+        if(illuminationLevel > 3f){
+            illuminationLevel = 3f;
+        }
     }
     IEnumerator Countdown(){
         yield return new WaitForSeconds(3f);
